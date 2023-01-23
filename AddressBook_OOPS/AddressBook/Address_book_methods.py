@@ -1,3 +1,4 @@
+from Details import Details
 
 
 class Address_book_methods(object):
@@ -17,16 +18,16 @@ class Address_book_methods(object):
         print("\n\t\t\t\t\t---------------- Existing contact book ------------------------ \n\n", contact)
 
     def adding_details(self):
-        first_name = input("Enter the first name : ")
-        second_name = input("Enter the second name : ")
-        address = input("Enter the address : ")
-        city = input("Enter the city : ")
-        state = input("Enter the state : ")
-        zip_code = input("Enter the zip_code : ")
-        phn = input("Enter the phone number : ")
-        email = input("Enter the email : ")
-        data = {"first_name": first_name, "second_name": second_name, "address": address, "city": city, "state": state,
-                "zip_code": zip_code, "phn": phn, "email": email}
+        details.setFirst_name(input("Enter the first name : "))
+        details.setLast_name(input("Enter the second name : "))
+        details.setAddress(input("Enter the address : "))
+        details.setCity(input("Enter the city : "))
+        details.setState(input("Enter the state : "))
+        details.setZip_code(input("Enter the zip_code : "))
+        details.setPhn(input("Enter the phone number : "))
+        details.setEmail(input("Enter the email : "))
+        data = {"first_name": details.getFirst_name(), "second_name": details.getLast_name(), "address": details.getAddress(), "city": details.getCity(), "state": details.getState(),
+                "zip_code": details.getZip_code(), "phn": details.getPhn(), "email": details.getEmail()}
         return data
 
     def edit_data(self, contact):
@@ -75,3 +76,4 @@ class Address_book_methods(object):
 
 
 # ------------------------------------------------------------------------------------------------------------------------
+details = Details()
