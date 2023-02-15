@@ -1,0 +1,2 @@
+class AddressBookException(Exception):
+    pass
